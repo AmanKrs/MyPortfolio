@@ -1,0 +1,57 @@
+.profile {
+  width: 80%;
+  height: 100%;
+  margin: 40px auto 20px auto;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.avatar-box {
+  width: 70%;
+  margin: 0 auto;
+}
+.dp {
+  width: 100%;
+  border-radius: 30px;
+}
+.avatar-info {
+  width: 100%;
+  text-align: center;
+}
+.avatar-bio p {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 40px;
+  background-color: aliceblue;
+}
+.info-seperator {
+  width: 60%;
+  height: 4px;
+  background-color: red;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 2px aliceblue;
+}
+.social-profiles {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+.social-icon {
+  vertical-align: middle;
+  margin-left: 15px;
+  width: 35px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid;
+  border-radius: 10px;
+}
+.social-profiles a {
+  text-decoration: none;
+  color: transparent;
+}
+.social-profiles a:hover {
+  text-decoration: none;
+  box-shadow: 2px;
+}

@@ -1,0 +1,36 @@
+.header h1 {
+  color: #fff;
+  margin-top: auto;
+}
+.page-title-hr {
+  width: 5%;
+  margin-left: 0px;
+  height: 4px;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 2px rgb(11, 101, 180);
+}
+.a-summary {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 10px;
+}
+.service-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+.modal {
+  display: block;
+}
+.active {
+  display: none;
+}

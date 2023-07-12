@@ -1,0 +1,30 @@
+.main-container {
+  max-width: 1200px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+}
+
+.sidenav-container {
+  width: 25%;
+  background-color: rgb(66, 64, 64);
+  border-radius: 25px;
+  position: sticky;
+  height: 100vh;
+  top: 60px;
+  z-index: 1;
+}
+.outlet-container {
+  width: 75%;
+  background-color: #492828;
+  height: 100%;
+  position: relative;
+  border-radius: 25px;
+  min-width: 75%;
+  margin: 0;
+  padding: 40px;
+  top: 60px;
+  box-sizing: border-box;
+}
