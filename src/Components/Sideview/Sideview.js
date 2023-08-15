@@ -14,7 +14,7 @@ export default function Sideview() {
           <img src={avatar} className="dp" alt="Avatar" />
         </figure>
         <div className="avatar-info">
-          <h2>AMAN KUMAR</h2>
+          <h2 className="myname">AMAN KUMAR</h2>
           <div className="avatar-bio">
             <p>Software Engineer</p>
           </div>

@@ -19,7 +19,7 @@
 .outlet-container {
   width: 75%;
   background-color: #492828;
-  height: 100%;
+  height: auto;
   position: relative;
   border-radius: 25px;
   min-width: 75%;
@@ -27,4 +27,5 @@
   padding: 40px;
   top: 60px;
   box-sizing: border-box;
+  margin-bottom: 60px;
 }

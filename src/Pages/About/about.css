@@ -22,11 +22,84 @@
   gap: 20px;
   padding: 10px;
 }
-.service-item {
+.info-item {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 20px 0;
   font-size: 20px;
+  display: flex;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.info-icon {
+  margin-left: 20px;
+}
+.info-details {
+  margin: 0px;
+  padding: 0px;
+  text-align: start;
+}
+.info-details h3 {
+  margin: 10px auto 1px 10px;
+  padding: 0px;
+}
+.info-details p {
+  margin: 5px auto 5px 10px;
+}
+
+.hobbie {
+  position: relative;
+  box-sizing: border-box;
+}
+.hobbie-crousel {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  overflow:auto;
+  
+}
+.hobbies-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+}
+.hobbie-icon-container {
+  position: absolute;
+  top: -35px;
+  left: 30px;
+  width: 90px;
+  height: 80px;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 1px rgb(49, 48, 48);
+}
+.hobbie-icon {
+  width: 100%;
+  height: 80px;
+}
+
+.hobbie-details {
+  margin: 0px;
+  padding: 0px;
+  width: 350px;
+}
+
+.hobbie-details h3 {
+  margin-top: 1px;
+  margin-left: 120px;
+}
+.hobbie-details p {
+  margin-top: 1px;
+  width: 100%;
 }
 .modal {
   display: block;

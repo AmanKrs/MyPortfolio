@@ -4,15 +4,17 @@ import { Outlet } from "react-router-dom";
 
 export default function Content() {
   return (
-    <div>
-      <div className="main-container">
-        <div className="sidenav-container">
-          <Sideview />
-        </div>
-        <div className="outlet-container">
-          <Outlet />
+    <>
+      <div>
+        <div className="main-container">
+          <div className="sidenav-container">
+            <Sideview />
+          </div>
+          <div className="outlet-container">
+            <Outlet />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

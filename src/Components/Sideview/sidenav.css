@@ -17,12 +17,20 @@
 .avatar-info {
   width: 100%;
   text-align: center;
+ 
+}
+
+.myname{
+  width: 100%;
+  animation: type 2s steps(28);
+  white-space: nowrap;
 }
 .avatar-bio p {
   width: 100%;
   margin: 0 auto;
   border-radius: 40px;
   background-color: aliceblue;
+  
 }
 .info-seperator {
   width: 60%;
@@ -54,4 +62,12 @@
 .social-profiles a:hover {
   text-decoration: none;
   box-shadow: 2px;
+}
+
+
+@keyframes type{
+  from{
+    width: 0;
+  }
+
 }
