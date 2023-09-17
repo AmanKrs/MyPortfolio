@@ -10,10 +10,12 @@ import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
-import camera from "../../Images/camera.png";
+import camera from "../../assets/camera.png";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import TerminalOutlinedIcon from "@mui/icons-material/TerminalOutlined";
 import LogoDevOutlinedIcon from "@mui/icons-material/LogoDevOutlined";
+import { myIntro, myHobbies, myRoles } from "../../data/aboutData";
+
 import { FolderGit2 } from "lucide-react";
 
 export default function About() {
@@ -51,14 +53,7 @@ export default function About() {
         </header>
         <h2>Introduction</h2>
         <div className="a-summary">
-          <p>
-            Enthusiastic Computer Science Engineer with 3.5 years of experience
-            in TCS, eager to contribute to team success with Skilled in HTML,
-            React.JS, JavaScript, DevOps, CI/CD Tools, Docker, AWS services, and
-            a fast learner with creative problem-solving skills, and good
-            communication skills looking for a responsible position to gain
-            practical experience.
-          </p>
+          <p>{myIntro.summary}</p>
         </div>
         <h2>Roles and Responsibilites</h2>
         <div className="service-grid">
@@ -68,7 +63,7 @@ export default function About() {
             </div>
             <div className="info-details">
               <h3>Frontend Developer</h3>
-              <p>building as api performance dashboard</p>
+              <p>building </p>
             </div>
           </div>
           <div className="info-item" onClick={handleItem2}>
@@ -78,8 +73,7 @@ export default function About() {
             <div className="info-details">
               <h3>Deployment Architecture</h3>
               <p>
-                architecting, designing, and implementing Jenkins jobs that
-                execute Shell scripts for automation with Pipeline.
+                architecting
               </p>
             </div>
           </div>
@@ -91,8 +85,7 @@ export default function About() {
               <h3>Deployment Developer</h3>
 
               <p>
-                Creating shell-script for automation and get relief from manual
-                efforts
+                Creating 
               </p>
             </div>
           </div>
@@ -102,72 +95,49 @@ export default function About() {
             </div>
             <div className="info-details">
               <h3>Technical Support</h3>
-              <p>creating jobs , performance testing for APIs using Jmeter</p>
+              <p>creating jobs </p>
             </div>
           </div>
         </div>
         <br></br>
         <h2>Hobbies</h2>
-        <br></br>
-        <br></br>
+
         <div className="hobbie">
           <div className="hobbie-crousel">
-            <div className="hobbies-item">
-              <div className="hobbie-icon-container">
-                <img src={camera} className="hobbie-icon" />
-              </div>
-              <div className="hobbie-details">
-                <h3>Photography</h3>
-                <p>
-                  I love taking picture, Also handling a instagram page named
-                  @akpicso
-                </p>
-              </div>
-            </div>
-            <div className="hobbies-item">
-              <div className="hobbie-icon-container">
-                <img src={camera} className="hobbie-icon" />
-              </div>
-              <div className="hobbie-details">
-                <h3>Frontend Developer</h3>
-                <p>building as api performance dashboard</p>
-              </div>
-            </div>
-            <div className="hobbies-item">
-              <div className="hobbie-icon-container">
-                <img src={camera} className="hobbie-icon" />
-              </div>
-              <div className="hobbie-details">
-                <h3>Frontend Developer</h3>
-                <p>building as api performance dashboard</p>
-              </div>
-            </div>
-            <div className="hobbies-item">
-              <div className="hobbie-icon-container">
-                <img src={camera} className="hobbie-icon" />
-              </div>
-              <div className="hobbie-details">
-                <h3>Frontend Developer</h3>
-                <p>building as api performance dashboard</p>
-              </div>
-            </div>
+            {myHobbies.map((elem, index) => {
+              return (
+                <>
+                  <div className="hobbies-item" key={index}>
+                    <figure className="hobbie-icon-container">
+                      <img src={elem.img} className="hobbie-icon" />
+                    </figure>
+                    <div className="hobbie-details">
+                      <h3>{elem.name}</h3>
+                      <p>
+                        {elem.details}
+                      </p>
+                    </div>
+                  </div>
+                </>
+              );
+            })}
           </div>
         </div>
 
         <Dialog open={openItem1} onClose={handleClose}>
-          <div>item1</div>
+          <div>{myRoles.item1}</div>
           <Button onClick={handleClose}>Close</Button>
         </Dialog>
         <Dialog open={openItem2} onClose={handleClose}>
-          <div>item2</div>
+          <div>{myRoles.item2}</div>
           <Button onClick={handleClose}>Close</Button>
         </Dialog>
         <Dialog open={openItem3} onClose={handleClose}>
-          <div>item3</div>
+          <div>{myRoles.item3}</div>
           <Button onClick={handleClose}>Close</Button>
         </Dialog>
         <Dialog open={openItem4} onClose={handleClose}>
-          <div>item4</div>
+          <div>{myRoles.item4}</div>
           <Button onClick={handleClose}>Close</Button>
         </Dialog>
       </div>

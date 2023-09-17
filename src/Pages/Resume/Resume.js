@@ -1,66 +1,51 @@
 import React from "react";
 import "./resume.css";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
-import { Dot } from "lucide-react";
-
+import Tooltip from "@mui/material/Tooltip";
+import mySkills from "../../data/SkillData";
 export default function Resume() {
+  
+
   return (
     <div>
       <header className="header">
         <h1>Resume</h1>
         <hr className="page-title-hr"></hr>
       </header>
-      <div>
+      <section>
         <div className="experience">
           <WorkHistoryIcon />
           <h3>ExPerience</h3>
         </div>
-        <div class="sub-content">
-          <div class="epx-item1">
+        <div className="sub-content">
+          <div className="epx-item1">
             <h3>Tata Consultancy Services</h3>
-            <span class="p-span">Sep-2019 - Present</span>
           </div>
-          <p className="exp-role">
-            Frontend Developer | ReactJS, JavaScript, GraphQL
-          </p>
-          <hr class="item-separator" />
-          <p className="epx-role-work">
-            • Building Dashboard for the testing team to access data from the
-            database in UI for particular intervals.
-            <br></br>• Increase the coach-to-user ratio by 30% by automating the
-            task assigned to the user.
-          </p>
-          <p className="exp-role">
-            Deployment Developer | Jenkins, Sos-Scheduler, Git, Shell-Scripting,
-            JMeter
-          </p>
-          <hr class="item-separator" />
-          <p className="epx-role-work">
-            • Strong knowledge and experience in DevOps practices, system
-            administration, and Unix/Linux operating systems.
-            <br></br>• Increase the coach-to-user ratio by 30% by automating the
-            task assigned to the user.
-          </p>
-        </div>
-        <div class="sub-content">
-          <div class="epx-item1">
-            <h3>Tata Consultancy Services</h3>
-            <span class="p-span">Jan 1016 - Dec 2021</span>
+          <p className="p-span">Sep-2019 - Present</p>
+          <hr className="item-separator" />
+          <div className="epx-role-work">
+            <ul className="stepper-ul">
+              <li className="epx-stepper-li">
+                Building Dashboard for the testing team to access data from the
+                database in UI for particular intervals.
+              </li>
+              <li className="epx-stepper-li">
+                Increase the coach-to-user ratio by 30% by automating the task
+                assigned to the user.
+              </li>
+              <li className="epx-stepper-li">
+                Strong knowledge and experience in DevOps practices, system
+                administration, and Unix/Linux operating systems.
+              </li>
+              <li className="epx-stepper-li">
+                Increase the coach-to-user ratio by 30% by automating the task
+                assigned to the user.
+              </li>
+            </ul>
           </div>
-          <p className="exp-role">Bachelor Of Technology</p>
-
-          <p className="epx-role-work">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
-            dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar
-            quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus
-            etiam et pellentesque. Molestie risus enim neque eget dui.
-          </p>
-
-          <hr class="item-separator" />
         </div>
-      </div>
-
-      <div>
+      </section>
+      <section>
         <div className="experience">
           <WorkHistoryIcon />
           <h3>Education</h3>
@@ -68,47 +53,84 @@ export default function Resume() {
 
         <ol className="stepper-ul">
           <li className="stepper-li">
-            <div class="epx-item1">
+            <div className="epx-item1">
               <h3>Jaipur National University </h3>
-              <span class="p-span">Jaipur, RJ</span>
+              <span className="p-span">2015-2019</span>
             </div>
-            <div>
-              <p>B.Tech IN Computer Science and Engineering.</p>
-              <p>Graduate 2019 | Per : 67.9%</p>
-            </div>
+            <p>
+              <span>B.Tech IN Computer Science and Engineering.</span>
+              <span>Graduate 2019 | Per : 67.9%</span>
+            </p>
           </li>
           <li className="stepper-li">
-            <div class="epx-item1">
+            <div className="epx-item1">
               <h3>Jaipur National University </h3>
-              <span class="p-span">Jaipur, RJ</span>
+              <span className="p-span">2015-2019</span>
             </div>
-            <div>
-              <p>B.Tech IN Computer Science and Engineering.</p>
-              <p>Graduate 2019 | Per : 67.9%</p>
-            </div>
+            <p>
+              <span>B.Tech IN Computer Science and Engineering.</span>
+              <span>Graduate 2019 | Per : 67.9%</span>
+            </p>
           </li>
+
           <li className="stepper-li">
-            <div class="epx-item1">
+            <div className="epx-item1">
               <h3>Jaipur National University </h3>
-              <span class="p-span">Jaipur, RJ</span>
+              <span className="p-span">2015-2019</span>
             </div>
-            <div>
-              <p>B.Tech IN Computer Science and Engineering.</p>
-              <p>Graduate 2019 | Per : 67.9%</p>
-            </div>
-          </li>
-          <li className="stepper-li">
-            <div class="epx-item1">
-              <h3>Jaipur National University </h3>
-              <span class="p-span">Jaipur, RJ</span>
-            </div>
-            <div>
-              <p>B.Tech IN Computer Science and Engineering.</p>
-              <p>Graduate 2019 | Per : 67.9%</p>
-            </div>
+            <p>
+              <span>B.Tech IN Computer Science and Engineering.</span>
+              <span>Graduate 2019 | Per : 67.9%</span>
+            </p>
           </li>
         </ol>
-      </div>
+      </section>
+      <section>
+        <div className="experience">
+          <WorkHistoryIcon />
+          <h3>SKILLS</h3>
+        </div>
+        <div className="skillsContainer">
+          {mySkills.map((skill,index)=>{
+            return <>
+            <div className="iconContainer" key={index}>
+            <Tooltip
+              title={
+                <div>
+                  <p className="progress-title">
+                    <span>Score</span>
+                    <span>{skill.score}%</span>
+                  </p>
+                  <progress
+                    id="file"
+                    value={skill.score}
+                    max="100"
+                    style={{ accentColor: "#ffb400" }}
+                  />
+                </div>
+              }
+              placement="right-end"
+            >
+              <img src={skill.img} alt="skillImage" className="skillIcon" />
+            </Tooltip>
+            <p>{skill.name}</p>
+          </div>
+            </>
+          })}
+        </div>
+      </section>
+      <section>
+        <div className="experience">
+          <WorkHistoryIcon />
+          <h3>ACCOMPLISHMENTS</h3>
+        </div>
+        <div className="accomplish">
+          <li className="epx-stepper-li">
+            Received Best team award for the successful delivery to production.
+          </li>
+          <li className="epx-stepper-li">Received Star of the Month Award.</li>
+        </div>
+      </section>
     </div>
   );
 }

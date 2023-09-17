@@ -1,7 +1,99 @@
-import React from 'react'
+import React, { useState } from "react";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import "./project.css";
+
+import projectDetails from "../../data/projectData";
 
 export default function Project() {
+  const [activeItem, setActiveItem] = useState("All");
+
+  const items = ["All", "Basic", "Web App", "React", "MERN"];
+
+  const handleProject = (elem) => {
+    setActiveItem(elem);
+  };
   return (
-    <div>Project</div>
-  )
+    <div>
+      <header className="header">
+        <h1>Project</h1>
+        <hr className="page-title-hr"></hr>
+      </header>
+
+      <nav className="projectNav">
+        {items.map((elem, index) => {
+          return (
+            <>
+              <div
+                key={index}
+                className={`projectType ${
+                  activeItem === elem ? "activeProj" : ""
+                }`}
+                onClick={() => {
+                  handleProject(elem);
+                }}
+              >
+                {elem}
+              </div>
+            </>
+          );
+        })}
+      </nav>
+      <section className="projectBody">
+        {projectDetails.map((elem, key) => {
+          console.log(key);
+          if (elem.type == activeItem) {
+            return (
+              <>
+                <div className="card" key={key}>
+                  <div className="card-view">
+                    <img src={elem.image} class="card-img" alt="ProjectImage" />
+                    <div className="displayProj">
+                      <VisibilityIcon style={{ fontSize: "40px" }} />
+                      <GitHubIcon style={{ fontSize: "40px" }} />
+                    </div>
+                  </div>
+                  <div className="card-detail">
+                    <div className="crd-p-typ">
+                      <span className="p-typ">{elem.type}</span>
+                    </div>
+                    <h4>{elem.title}</h4>
+                    <p>{elem.description}</p>
+                    <div className="card-more">
+                      <span>Learn More </span>
+                      <img src="image/Frame.png" />
+                    </div>
+                  </div>
+                </div>
+              </>
+            );
+          } else if (activeItem == "All") {
+            return (
+              <>
+                <div className="card" key={key}>
+                  <div className="card-view">
+                    <img src={elem.image} className="card-img" />
+                    <div className="displayProj">
+                      <VisibilityIcon style={{ fontSize: "40px" }} />
+                      <GitHubIcon style={{ fontSize: "40px" }} />
+                    </div>
+                  </div>
+                  <div className="card-detail">
+                    <div className="crd-p-typ">
+                      <span className="p-typ">{elem.type}</span>
+                    </div>
+                    <h4>{elem.title}</h4>
+                    <p>{elem.description}</p>
+                    <div className="card-more">
+                      <span>Learn More </span>
+                    </div>
+                  </div>
+                </div>
+              </>
+            );
+          }
+        })}
+      </section>
+    </div>
+  );
 }
