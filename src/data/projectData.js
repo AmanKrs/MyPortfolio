@@ -25,6 +25,7 @@ const projectDetails = [
   {
     title: "Weather App",
     type: "Basic",
+    image: img,
     description:
       "CrCheck Weather Create Your TODO for organised your work Create Your TODO for organised your work",
   },

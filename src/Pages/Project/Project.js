@@ -49,19 +49,25 @@ export default function Project() {
                   <div className="card-view">
                     <img src={elem.image} class="card-img" alt="ProjectImage" />
                     <div className="displayProj">
-                      <VisibilityIcon style={{ fontSize: "40px" }} />
-                      <GitHubIcon style={{ fontSize: "40px" }} />
+                      <VisibilityIcon
+                        style={{ fontSize: "40px" }}
+                        className="eye"
+                      />
+                      <GitHubIcon
+                        style={{ fontSize: "40px" }}
+                        className="axy"
+                      />
                     </div>
                   </div>
+                  <div className="crd-p-typ">
+                    <span className="p-typ">{elem.type}</span>
+                  </div>
                   <div className="card-detail">
-                    <div className="crd-p-typ">
-                      <span className="p-typ">{elem.type}</span>
-                    </div>
                     <h4>{elem.title}</h4>
                     <p>{elem.description}</p>
                     <div className="card-more">
                       <span>Learn More </span>
-                      <img src="image/Frame.png" />
+                      
                     </div>
                   </div>
                 </div>
@@ -74,16 +80,23 @@ export default function Project() {
                   <div className="card-view">
                     <img src={elem.image} className="card-img" />
                     <div className="displayProj">
-                      <VisibilityIcon style={{ fontSize: "40px" }} />
-                      <GitHubIcon style={{ fontSize: "40px" }} />
+                      <VisibilityIcon
+                        style={{ fontSize: "40px" }}
+                        className="eye"
+                      />
+                      <GitHubIcon
+                        style={{ fontSize: "40px" }}
+                        className="axy"
+                      />
                     </div>
                   </div>
+                  <div className="crd-p-typ">
+                    <span className="p-typ">{elem.type}</span>
+                  </div>
                   <div className="card-detail">
-                    <div className="crd-p-typ">
-                      <span className="p-typ">{elem.type}</span>
-                    </div>
                     <h4>{elem.title}</h4>
                     <p>{elem.description}</p>
+
                     <div className="card-more">
                       <span>Learn More </span>
                     </div>

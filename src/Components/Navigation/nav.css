@@ -18,7 +18,7 @@
   padding: 0 10px;
   box-sizing: border-box;
 }
-li {
+.nav-ul li {
   list-style: none;
   margin: 0 15px;
   font-size: large;
@@ -28,4 +28,17 @@ li {
 .nav-ul a {
   color: black;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 640px) {
+  .nav-bar {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    background-color: darkgrey;
+    opacity: 0.4;
+    position: absolute;
+    top: auto;
+    bottom: -20px;
+    z-index: 1;
+  }
 }

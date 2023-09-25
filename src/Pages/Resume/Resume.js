@@ -4,8 +4,6 @@ import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import Tooltip from "@mui/material/Tooltip";
 import mySkills from "../../data/SkillData";
 export default function Resume() {
-  
-
   return (
     <div>
       <header className="header">
@@ -90,33 +88,41 @@ export default function Resume() {
           <WorkHistoryIcon />
           <h3>SKILLS</h3>
         </div>
-        <div className="skillsContainer">
-          {mySkills.map((skill,index)=>{
-            return <>
-            <div className="iconContainer" key={index}>
-            <Tooltip
-              title={
-                <div>
-                  <p className="progress-title">
-                    <span>Score</span>
-                    <span>{skill.score}%</span>
-                  </p>
-                  <progress
-                    id="file"
-                    value={skill.score}
-                    max="100"
-                    style={{ accentColor: "#ffb400" }}
-                  />
-                </div>
-              }
-              placement="right-end"
-            >
-              <img src={skill.img} alt="skillImage" className="skillIcon" />
-            </Tooltip>
-            <p>{skill.name}</p>
+        <div className="skillBox">
+          <div className="skillsContainer">
+            {mySkills.map((skill, index) => {
+              return (
+                <>
+                  <div className="iconContainer" key={index}>
+                    <Tooltip
+                      title={
+                        <div>
+                          <p className="progress-title">
+                            <span>Score</span>
+                            <span>{skill.score}%</span>
+                          </p>
+                          <progress
+                            id="file"
+                            value={skill.score}
+                            max="100"
+                            style={{ accentColor: "#ffb400" }}
+                          />
+                        </div>
+                      }
+                      placement="right-end"
+                    >
+                      <img
+                        src={skill.img}
+                        alt="skillImage"
+                        className="skillIcon"
+                      />
+                    </Tooltip>
+                    <p className="skill-name">{skill.name}</p>
+                  </div>
+                </>
+              );
+            })}
           </div>
-            </>
-          })}
         </div>
       </section>
       <section>

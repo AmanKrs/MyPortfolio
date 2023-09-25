@@ -28,10 +28,13 @@
   padding: 20px 5px;
   font-size: 20px;
   display: flex;
+  gap: 10px;
   border: none;
   border-radius: 8px;
   box-sizing: border-box;
   cursor: pointer;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .info-icon {
   margin-left: 20px;
@@ -42,11 +45,14 @@
   text-align: start;
 }
 .info-details h3 {
-  margin: 10px auto 1px 10px;
+  margin: 0px;
   padding: 0px;
 }
 .info-details p {
-  margin: 5px auto 5px 10px;
+  margin: 5px auto;
+  padding-right: 10px;
+  font-size: 18px;
+  text-align: start;
 }
 
 .hobbie {
@@ -65,12 +71,14 @@
   overflow-x: auto;
 }
 .hobbie-crousel::-webkit-scrollbar {
-  width: 5px;
   height: 8px;
 }
 .hobbie-crousel::-webkit-scrollbar-track {
+  width: 50px;
   border-radius: 5px;
+  background-color: #fff;
 }
+
 .hobbie-crousel::-webkit-scrollbar-thumb {
   background: red;
   border-radius: 13px;
@@ -80,6 +88,7 @@
 }
 .hobbies-item {
   background-color: rgba(255, 255, 255, 0.8);
+  width: auto;
   padding: 10px 20px;
   font-size: 20px;
   border: none;
@@ -96,14 +105,24 @@
   width: 90px;
   height: 80px;
   background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   border-radius: 15px;
   box-sizing: border-box;
-  box-shadow: 2px 2px 1px rgb(49, 48, 48);
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6));
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .hobbie-icon {
-  width: 100%;
-  height: 80px;
+  width: 90%;
+  height: 90%;
+  border-radius: 100%;
+}
+.hobbie-icon:hover {
+  transform: rotateY(360deg);
+  transition: transform 2s;
+  transform-style: preserve-3d;
 }
 
 .hobbie-details {
@@ -118,6 +137,9 @@
 }
 .hobbie-details p {
   margin-top: 1px;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
   width: 100%;
 }
 .modal {
@@ -125,4 +147,89 @@
 }
 .active {
   display: none;
+}
+
+.dialogBox {
+  width: 100%;
+  height: 100%;
+}
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  border-radius: 20px !important;
+}
+.openDialog {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: start;
+  gap: 10px;
+  border: 2px solid seagreen;
+  border-radius: 20px;
+  background-color: rgba(66, 65, 65, 0.411);
+}
+.dialogContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.dialog-icon {
+  position: relative;
+  width: 20%;
+  height: 10%;
+}
+.closeDialogbtn {
+  font-size: 28px !important;
+  color: rgb(12, 12, 12);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+  .aboutContainer {
+    width: 100%;
+  }
+
+  .service-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    width: auto;
+  }
+  .info-icon {
+    margin-left: 10px;
+  }
+  .info-details h3{
+    width: auto;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 19px;
+  }
+  .info-details p {
+  margin-left: -45px;
+  font-size: 16px;
+  }
+
+  .hobbie-details{
+    width: 300px;
+    height: max-content;
+  }
+  .hobbie-details h3 {
+    
+    margin-top: 50px;
+    margin-left: 10px;
+  }
+ 
+
+}
+@media only screen and (max-width: 768px) {
+  .aboutContainer {
+    width: 100%;
+  }
+  .service-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
 }

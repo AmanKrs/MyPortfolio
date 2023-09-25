@@ -1,23 +1,17 @@
 import React, { useState } from "react";
 import "./about.css";
 import CancelIcon from "@mui/icons-material/Cancel";
-import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from "@mui/material/DialogContent";
-import DialogActions from "@mui/material/DialogActions";
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
-import Typography from "@mui/material/Typography";
-import camera from "../../assets/camera.png";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import TerminalOutlinedIcon from "@mui/icons-material/TerminalOutlined";
 import LogoDevOutlinedIcon from "@mui/icons-material/LogoDevOutlined";
+import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
 import { myIntro, myHobbies, myRoles } from "../../data/aboutData";
-
-import { FolderGit2 } from "lucide-react";
-
+import vscode from "../../assets/icon/vscode.svg";
+import dep from "../../assets/icon/agile.png";
+import techsup from "../../assets/icon/techspprt.png";
+import study from "../../assets/icon/study.svg";
 export default function About() {
   const [openItem1, setOpenItem1] = useState(false);
   const [openItem2, setOpenItem2] = useState(false);
@@ -46,7 +40,7 @@ export default function About() {
 
   return (
     <>
-      <div>
+      <div className="aboutContainer">
         <header className="header">
           <h1>About Me</h1>
           <hr className="page-title-hr"></hr>
@@ -63,39 +57,42 @@ export default function About() {
             </div>
             <div className="info-details">
               <h3>Frontend Developer</h3>
-              <p>building </p>
-            </div>
-          </div>
-          <div className="info-item" onClick={handleItem2}>
-            <div className="info-icon">
-              <FolderGit2 size={40} color="red" />
-            </div>
-            <div className="info-details">
-              <h3>Deployment Architecture</h3>
               <p>
-                architecting
+                Developing a web-based app components using React.Js using...
               </p>
             </div>
           </div>
-          <div className="info-item" onClick={handleItem3}>
+          <div className="info-item" onClick={handleItem2}>
             <div className="info-icon">
               <TerminalOutlinedIcon sx={{ fontSize: "40px", color: "red" }} />
             </div>
             <div className="info-details">
               <h3>Deployment Developer</h3>
-
-              <p>
-                Creating 
-              </p>
+              <p>Design and implementation of Jenkins jobs that execute ...</p>
             </div>
           </div>
-          <div className="info-item" onClick={handleItem4}>
+
+          <div className="info-item" onClick={handleItem3}>
             <div className="info-icon">
               <LogoDevOutlinedIcon sx={{ fontSize: "40px", color: "red" }} />
             </div>
             <div className="info-details">
               <h3>Technical Support</h3>
-              <p>creating jobs </p>
+              <p>
+                Configuring Application Server using JBoss Application Server...
+              </p>
+            </div>
+          </div>
+          <div className="info-item" onClick={handleItem4}>
+            <div className="info-icon">
+              <LocalLibraryIcon sx={{ fontSize: "45px", color: "red" }} />
+            </div>
+            <div className="info-details">
+              <h3>Self-Learning</h3>
+              <p>
+                I am constantly eager to learn new technology. To accomplish my
+                aim ...
+              </p>
             </div>
           </div>
         </div>
@@ -109,13 +106,15 @@ export default function About() {
                 <>
                   <div className="hobbies-item" key={index}>
                     <figure className="hobbie-icon-container">
-                      <img src={elem.img} className="hobbie-icon" />
+                      <img
+                        src={elem.img}
+                        className="hobbie-icon"
+                        alt="hobbieImage"
+                      />
                     </figure>
                     <div className="hobbie-details">
                       <h3>{elem.name}</h3>
-                      <p>
-                        {elem.details}
-                      </p>
+                      <p>{elem.details}</p>
                     </div>
                   </div>
                 </>
@@ -124,21 +123,42 @@ export default function About() {
           </div>
         </div>
 
-        <Dialog open={openItem1} onClose={handleClose}>
-          <div>{myRoles.item1}</div>
-          <Button onClick={handleClose}>Close</Button>
+        <Dialog open={openItem1} onClose={handleClose} className="dialogBox">
+          <div className="openDialog">
+            <div className="dialogContent">
+              <img src={vscode} className="dialog-icon" alt="dialogImage" />
+
+              <p>{myRoles.item1}</p>
+            </div>
+            <CancelIcon onClick={handleClose} className="closeDialogbtn" />
+          </div>
         </Dialog>
-        <Dialog open={openItem2} onClose={handleClose}>
-          <div>{myRoles.item2}</div>
-          <Button onClick={handleClose}>Close</Button>
+        <Dialog open={openItem2} onClose={handleClose} className="dialogBox">
+          <div className="openDialog">
+            <div className="dialogContent">
+              <img src={dep} className="dialog-icon" alt="dialogImage" />
+              <p>{myRoles.item2}</p>
+            </div>
+            <CancelIcon onClick={handleClose} className="closeDialogbtn" />
+          </div>
         </Dialog>
-        <Dialog open={openItem3} onClose={handleClose}>
-          <div>{myRoles.item3}</div>
-          <Button onClick={handleClose}>Close</Button>
+        <Dialog open={openItem3} onClose={handleClose} className="dialogBox">
+          <div className="openDialog">
+            <div className="dialogContent">
+              <img src={techsup} className="dialog-icon" alt="dialogImage" />
+              <p>{myRoles.item3}</p>
+            </div>
+            <CancelIcon onClick={handleClose} className="closeDialogbtn" />
+          </div>
         </Dialog>
-        <Dialog open={openItem4} onClose={handleClose}>
-          <div>{myRoles.item4}</div>
-          <Button onClick={handleClose}>Close</Button>
+        <Dialog open={openItem4} onClose={handleClose} className="dialogBox">
+          <div className="openDialog">
+            <div className="dialogContent">
+              <img src={study} className="dialog-icon" alt="dialogImage" />
+              <p>{myRoles.item4}</p>
+            </div>
+            <CancelIcon onClick={handleClose} className="closeDialogbtn" />
+          </div>
         </Dialog>
       </div>
     </>
