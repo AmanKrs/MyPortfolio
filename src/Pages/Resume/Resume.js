@@ -1,8 +1,9 @@
 import React from "react";
 import "./resume.css";
+import SchoolIcon from "@mui/icons-material/School";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import Tooltip from "@mui/material/Tooltip";
-import mySkills from "../../data/SkillData";
+import { mySkills, myExperience, myEducation } from "../../data/SkillData";
 export default function Resume() {
   return (
     <div>
@@ -13,74 +14,61 @@ export default function Resume() {
       <section>
         <div className="experience">
           <WorkHistoryIcon />
-          <h3>ExPerience</h3>
+          <h3>Experience</h3>
         </div>
-        <div className="sub-content">
-          <div className="epx-item1">
-            <h3>Tata Consultancy Services</h3>
-          </div>
-          <p className="p-span">Sep-2019 - Present</p>
-          <hr className="item-separator" />
-          <div className="epx-role-work">
-            <ul className="stepper-ul">
-              <li className="epx-stepper-li">
-                Building Dashboard for the testing team to access data from the
-                database in UI for particular intervals.
-              </li>
-              <li className="epx-stepper-li">
-                Increase the coach-to-user ratio by 30% by automating the task
-                assigned to the user.
-              </li>
-              <li className="epx-stepper-li">
-                Strong knowledge and experience in DevOps practices, system
-                administration, and Unix/Linux operating systems.
-              </li>
-              <li className="epx-stepper-li">
-                Increase the coach-to-user ratio by 30% by automating the task
-                assigned to the user.
-              </li>
-            </ul>
-          </div>
-        </div>
+        {myExperience.map((elem, index) => {
+          return (
+            <>
+              <div className="sub-content" key={index}>
+                <div className="epx-item1">
+                  <h3 className="epxcompany">{elem.company}</h3>
+                </div>
+                <p className="p-span">Sep-2019 - Present</p>
+                <hr className="item-separator" />
+                <div className="epx-role-work">
+                  <ul className="stepper-ul">
+                    {elem.details.map((exp, expkey) => {
+                      return (
+                        <>
+                          <li className="epx-stepper-li" key={expkey}>
+                            {exp}
+                          </li>
+                        </>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            </>
+          );
+        })}
       </section>
       <section>
         <div className="experience">
-          <WorkHistoryIcon />
+          <SchoolIcon style={{ fontSize: "30px" }} />
           <h3>Education</h3>
         </div>
-
         <ol className="stepper-ul">
-          <li className="stepper-li">
-            <div className="epx-item1">
-              <h3>Jaipur National University </h3>
-              <span className="p-span">2015-2019</span>
-            </div>
-            <p>
-              <span>B.Tech IN Computer Science and Engineering.</span>
-              <span>Graduate 2019 | Per : 67.9%</span>
-            </p>
-          </li>
-          <li className="stepper-li">
-            <div className="epx-item1">
-              <h3>Jaipur National University </h3>
-              <span className="p-span">2015-2019</span>
-            </div>
-            <p>
-              <span>B.Tech IN Computer Science and Engineering.</span>
-              <span>Graduate 2019 | Per : 67.9%</span>
-            </p>
-          </li>
-
-          <li className="stepper-li">
-            <div className="epx-item1">
-              <h3>Jaipur National University </h3>
-              <span className="p-span">2015-2019</span>
-            </div>
-            <p>
-              <span>B.Tech IN Computer Science and Engineering.</span>
-              <span>Graduate 2019 | Per : 67.9%</span>
-            </p>
-          </li>
+          {myEducation.map((edu, edukey) => {
+            return (
+              <>
+                <li className="stepper-li">
+                  <div className="epx-item1">
+                    <h3 className="eduInstitute">{edu.institute} </h3>
+                    <span className="periodspan">{edu.period}</span>
+                  </div>
+                  <p className="edudetail">
+                    <span>
+                      {edu.degree}: {edu.sub}
+                    </span>
+                    <span>
+                      {edu.passout} | Per : {edu.percentage}
+                    </span>
+                  </p>
+                </li>
+              </>
+            );
+          })}
         </ol>
       </section>
       <section>

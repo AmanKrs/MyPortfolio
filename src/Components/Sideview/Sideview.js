@@ -12,11 +12,18 @@ export default function Sideview() {
 
   const handleExpandInfo = () => {
     setExpandInfo(!expandInfo);
+    // if (!expandInfo) {
+    //   document.getElementById("sidenav").style.height = "0";
+    //   setExpandInfo(!expandInfo);
+    // } else {
+    //   document.getElementById("sidenav").style.height = "100px";
+    //   setExpandInfo(!expandInfo);
+    // }
   };
 
   return (
     <div>
-      <div className="profile">
+      <div className="profile ">
         <figure className="avatar-box">
           <img src={avatar} className="dp" alt="Avatar" />
         </figure>
@@ -24,17 +31,18 @@ export default function Sideview() {
           <h2 className="myname">AMAN KUMAR</h2>
           <div className="avatar-bio">
             <p>Software Engineer</p>
-            <p>
-              Since 2019
-            </p>
+            <p>Since 2019</p>
           </div>
         </div>
       </div>
-      <div className="expandInfo">
+      <div className="expandInfo ">
         <button onClick={handleExpandInfo}>exapnad</button>
       </div>
-      <div className={expandInfo ? "expandAvatarInfo " : "closeExpand"}>
-      <hr className="info-seperator"></hr>
+      <div
+        className={expandInfo ? "expandAvatarInfo " : "closeExpand "}
+        id="sidenav"
+      >
+        <hr className="info-seperator"></hr>
         <div className="social-profiles ">
           <a
             href="mailto: kumaraman20ak@gmail.com"
@@ -69,6 +77,12 @@ export default function Sideview() {
         <div className="expcountdiv ">
           <ExpCount />
         </div>
+        <a href="../resume/AmanKumar.pdf" target="_blank">
+          <button class="downloadCV" id="res">
+            Download CV
+           
+          </button>
+        </a>
       </div>
     </div>
   );

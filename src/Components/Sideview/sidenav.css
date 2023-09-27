@@ -3,7 +3,11 @@
 }
 .expandAvatarInfo {
   display: block;
+  overflow: hidden;
+  transition: all 0.3s;
 }
+
+
 .profile {
   width: 80%;
   height: 100%;
@@ -11,6 +15,7 @@
   border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
+ 
 }
 .avatar-box {
   width: 70%;
@@ -71,6 +76,7 @@
     justify-content: space-between;
     margin: 0px 0px 10px 0px;
     box-sizing: border-box;
+    
   }
   .avatar-box {
     width: 100px;
@@ -119,8 +125,8 @@
     display: none;
   }
   .closeExpand {
-    transition: ease-in-out 5s;
     background-color: aliceblue;
+   animation-timing-function: ease-in-out;
   }
 }
 
@@ -182,5 +188,7 @@
   .closeExpand {
     transition: ease-in-out 5s;
     background-color: aliceblue;
+    overflow: hidden;
+  transition: all 0.3s;
   }
 }
