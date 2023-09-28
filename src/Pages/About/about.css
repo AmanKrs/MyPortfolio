@@ -212,14 +212,18 @@
 
   .hobbie-details{
     width: 300px;
-    height: max-content;
+    height: 120px;
   }
   .hobbie-details h3 {
     
-    margin-top: 50px;
-    margin-left: 10px;
+    margin: 48px 0px 10px 10px;
   }
- 
+  .hobbie-details p{
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  }
 
 }
 @media only screen and (max-width: 768px) {

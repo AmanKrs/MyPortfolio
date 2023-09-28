@@ -48,7 +48,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 480px) and (max-width: 640px) {
   .sidenav-container {
     display: block;
     position: absolute;
@@ -63,11 +63,11 @@
     box-sizing: border-box;
     top: 140px;
     padding: 35px;
-    margin-bottom: 20px;
+    margin-bottom: 195px;
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 360px) and (max-width: 480px) {
   .sidenav-container {
     display: block;
     position: absolute;
@@ -76,15 +76,16 @@
     height: auto;
     z-index: 12;
   }
-
   .outlet-container {
     width: 100%;
     position: relative;
     box-sizing: border-box;
     padding: 20px;
     top: 140px;
+    margin-bottom: 200px;
   }
 }
+
 @media only screen and (min-width: 240px) and (max-width: 360px) {
   .sidenav-container {
     display: block;
@@ -101,5 +102,7 @@
     box-sizing: border-box;
     padding: 20px;
     top: 160px;
+    bottom: 20px;
+    margin-bottom: 210px;
   }
 }

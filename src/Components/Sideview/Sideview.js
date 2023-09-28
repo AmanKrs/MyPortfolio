@@ -78,7 +78,7 @@ export default function Sideview() {
           <ExpCount />
         </div>
         <a href="../resume/AmanKumar.pdf" target="_blank">
-          <button class="downloadCV" id="res">
+          <button className="downloadCV" id="res">
             Download CV
            
           </button>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { useNavigate } from "react-router-dom";
 import "./project.css";
 
 import projectDetails from "../../data/projectData";
@@ -10,9 +11,11 @@ export default function Project() {
 
   const items = ["All", "Basic", "Web App", "React", "MERN"];
 
+  const navigate = useNavigate();
   const handleProject = (elem) => {
     setActiveItem(elem);
   };
+
   return (
     <div>
       <header className="header">
@@ -47,16 +50,24 @@ export default function Project() {
               <>
                 <div className="card" key={key}>
                   <div className="card-view">
-                    <img src={elem.image} class="card-img" alt="ProjectImage" />
+                    <img
+                      src={elem.image}
+                      className="card-img"
+                      alt="ProjectImage"
+                    />
                     <div className="displayProj">
-                      <VisibilityIcon
-                        style={{ fontSize: "40px" }}
-                        className="eye"
-                      />
-                      <GitHubIcon
-                        style={{ fontSize: "40px" }}
-                        className="axy"
-                      />
+                      <a href={elem.siteurl} target="_blank">
+                        <VisibilityIcon
+                          style={{ fontSize: "40px" }}
+                          className="eye"
+                        />
+                      </a>
+                      <a href={elem.giturl} target="_blank">
+                        <GitHubIcon
+                          style={{ fontSize: "40px" }}
+                          className="axy"
+                        />
+                      </a>
                     </div>
                   </div>
                   <div className="crd-p-typ">
@@ -67,7 +78,6 @@ export default function Project() {
                     <p>{elem.description}</p>
                     <div className="card-more">
                       <span>Learn More </span>
-                      
                     </div>
                   </div>
                 </div>
@@ -80,14 +90,18 @@ export default function Project() {
                   <div className="card-view">
                     <img src={elem.image} className="card-img" />
                     <div className="displayProj">
-                      <VisibilityIcon
-                        style={{ fontSize: "40px" }}
-                        className="eye"
-                      />
-                      <GitHubIcon
-                        style={{ fontSize: "40px" }}
-                        className="axy"
-                      />
+                      <a href={elem.siteurl} target="_blank">
+                        <VisibilityIcon
+                          style={{ fontSize: "40px" }}
+                          className="eye"
+                        />
+                      </a>
+                      <a href={elem.giturl} target="_blank">
+                        <GitHubIcon
+                          style={{ fontSize: "40px" }}
+                          className="axy"
+                        />
+                      </a>
                     </div>
                   </div>
                   <div className="crd-p-typ">

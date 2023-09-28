@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./nav.css"
+import "./nav.css";
 
 export default function Navigation({ Children }) {
   return (
@@ -18,7 +18,9 @@ export default function Navigation({ Children }) {
           </Link>
         </ul>
       </nav>
-      <Children />
+      <div>
+        <Children />
+      </div>
     </div>
   );
 }
