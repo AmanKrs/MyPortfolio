@@ -2,31 +2,31 @@ import img from "../assets/img.webp";
 import check from "../assets/projectImg/weatherApp.png";
 const projectDetails = [
   {
-    title: "TODO-List",
+    title: "Weather App",
     type: "React",
     image: check,
     siteurl: "https://weatherappv1.000webhostapp.com/",
     giturl: "https://github.com/AmanKrs/Weather_App",
     description:
-      "Create Your TODO for organised your work. Create Your TODO for organised your work Create Your TODO for organised your work",
+      "Check Weather for different city, This project is done in HTML, CSS, JavaScript.",
   },
   {
-    title: "TODO-List",
+    title: "Weather App",
     type: "React",
     image: img,
     siteurl: "https://weatherappv1.000webhostapp.com/",
     giturl: "https://github.com/AmanKrs/Weather_App",
     description:
-      "Create Your TODO for organised your work. Create Your TODO for organised your work Create Your TODO for organised your work",
+      "Check Weather for different city, This project is done in HTML, CSS, JavaScript.",
   },
   {
-    title: "TODO-List",
+    title: "Weather App",
     type: "React",
     image: img,
     siteurl: "https://weatherappv1.000webhostapp.com/",
     giturl: "https://github.com/AmanKrs/Weather_App",
     description:
-      "Create Your TODO for organised your work. Create Your TODO for organised your work Create Your TODO for organised your work",
+      "Check Weather for different city, This project is done in HTML, CSS, JavaScript.",
   },
   {
     title: "Weather App",
@@ -35,7 +35,7 @@ const projectDetails = [
     siteurl: "https://weatherappv1.000webhostapp.com/",
     giturl: "https://github.com/AmanKrs/Weather_App",
     description:
-      "CrCheck Weather Create Your TODO for organised your work Create Your TODO for organised your work",
+      "Check Weather for different city, This project is done in HTML, CSS, JavaScript.",
   },
 ];
 

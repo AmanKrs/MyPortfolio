@@ -9,13 +9,16 @@ import bash from "../assets/icon/bashscripting.svg";
 import jenkins from "../assets/icon/jenkins.svg";
 import linux from "../assets/icon/linux.svg";
 import sos from "../assets/icon/sos.jpeg";
-import techsupp from "../assets/icon/techspprt.png"
+import techsupp from "../assets/icon/techspprt.png";
 export const myExperience = [
   {
     company: "Tata Consultancy Services",
     details: [
-      "Building Dashboard for the testing team to access data  from the database in UI for particular intervals.",
-      "Building Dashboard for the testing team to access data  from the database in UI for particular intervals.",
+      "Creating Web-App for API Performance activity.",
+      "Builded Dashboard  Login/Register page with json token and form validation",
+      "Working of Performance testing of API and Application using JMeter",
+      "Working Experience with Jenkins, shell-Scripting, Git, Apache, sos job-scheduler, and JBoss Application servers.",
+      "Migrating On-Prem server and Application to OCI cloud server",
     ],
   },
 ];

@@ -6,7 +6,7 @@ import game from "../assets/game.svg";
 
 export const myIntro = {
   summary:
-    "Enthusiastic Computer Science Engineer with 3.5 years of experience in TCS, eager to contribute to team success with Skilled in HTML, React.JS, JavaScript, DevOps, CI/CD Tools, Docker, AWS services, and  a fast learner with creative problem-solving skills, and good  communication skills looking for a responsible position to gain  practical experience.",
+    "Enthusiastic Computer Science Engineer with 4.1 years of experience in TCS, eager to contribute to team success with Skilled in HTML, React.JS, JavaScript, DevOps, CI/CD Tools, Docker, AWS services, and  a fast learner with creative problem-solving skills, and good  communication skills looking for a responsible position to gain  practical experience.",
   other: "xyz",
 };
 
