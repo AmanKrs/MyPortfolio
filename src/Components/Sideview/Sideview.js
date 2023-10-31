@@ -6,6 +6,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import ExpCount from "../ExpCounter/ExpCount";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function Sideview() {
   const [expandInfo, setExpandInfo] = useState(true);
@@ -36,7 +37,12 @@ export default function Sideview() {
         </div>
       </div>
       <div className="expandInfo ">
-        <button onClick={handleExpandInfo}>exapnad</button>
+        <button
+          onClick={handleExpandInfo}
+          className={expandInfo ? "expandInfobtn" : "expandInfobtnrotate"}
+        >
+          <ExpandMoreIcon sx={{ fontSize: "40px" }} />
+        </button>
       </div>
       <div
         className={expandInfo ? "expandAvatarInfo " : "closeExpand "}
@@ -49,40 +55,36 @@ export default function Sideview() {
             target="_blank"
             rel="noreferrer"
           >
-            <span className="social-icon">
-              <EmailOutlinedIcon style={{ color: "red" }} />
-            </span>
+            <EmailOutlinedIcon
+              style={{ color: "red" }}
+              className="social-icon"
+            />
           </a>
           <a
             href="https://www.linkedin.com/in/aman-kumar20/"
             target="_blank"
             rel="noreferrer"
           >
-            <span className="social-icon">
-              <LinkedInIcon style={{ color: "blue" }} />
-            </span>
+            <LinkedInIcon style={{ color: "blue" }} className="social-icon" />
           </a>
           <a href="https://github.com/AmanKrs" target="_blank" rel="noreferrer">
-            <span className="social-icon">
-              <GitHubIcon style={{ color: "black" }} />
-            </span>
+            <GitHubIcon style={{ color: "black" }} className="social-icon" />
           </a>
           <a href="https://wa.me/918804236131" target="_blank" rel="noreferrer">
-            <span className="social-icon">
-              <WhatsAppIcon style={{ color: "green" }} />
-            </span>
+            <WhatsAppIcon style={{ color: "green" }} className="social-icon" />
           </a>
         </div>
-        <hr className="info-seperator"></hr>
+
         <div className="expcountdiv ">
           <ExpCount />
         </div>
-        <a href="../resume/AmanKumar.pdf" target="_blank">
-          <button className="downloadCV" id="res">
-            Download CV
-           
-          </button>
-        </a>
+        <div className="downloadCV-container">
+          <a href="../resume/AmanKumar.pdf" target="_blank">
+            <button className="downloadCV" id="res">
+              Download CV
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   );

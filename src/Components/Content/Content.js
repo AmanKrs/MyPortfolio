@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 export default function Content() {
   return (
     <>
-      <div>
+   
         <div className="main-container">
           <div className="sidenav-container">
             <Sideview />
@@ -14,7 +14,7 @@ export default function Content() {
             <Outlet />
           </div>
         </div>
-      </div>
+     
     </>
   );
 }

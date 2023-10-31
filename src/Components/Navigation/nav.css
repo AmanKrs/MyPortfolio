@@ -8,7 +8,10 @@
   border-radius: 0 20px;
   padding: 0 20px;
   box-shadow: none;
-  background-color: wheat;
+  background-color: #817e7e;
+  border-left:  1px solid #c4c3ca;
+  border-bottom: 1px solid #c4c3ca;
+  
 }
 .nav-ul {
   display: flex;
@@ -17,12 +20,14 @@
   align-items: center;
   padding: 0 10px;
   box-sizing: border-box;
+  
 }
 .nav-ul li {
   list-style: none;
   margin: 0 15px;
   font-size: large;
   font-weight: 600;
+  color: aliceblue;
 }
 
 .nav-ul a {
@@ -34,8 +39,8 @@
   .nav-bar {
     width: 93%;
     border-radius: 10px 10px 0 0;
-    background-color: darkgrey;
-    opacity: 1;
+    background-color: #7c7c7d;
+    opacity: 0.8;
     position: fixed;
     left: 0;
     right: auto;
@@ -50,8 +55,8 @@
   .nav-bar {
     width: 90.6%;
     border-radius: 10px 10px 0 0;
-    background-color: darkgrey;
-    opacity: 0.6;
+    background-color: #7c7c7d;
+    opacity: 0.8;
     position: fixed;
     left: 0;
     right: auto;

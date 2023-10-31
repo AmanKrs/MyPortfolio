@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { useNavigate } from "react-router-dom";
+
 import "./project.css";
 
 import projectDetails from "../../data/projectData";
@@ -11,7 +11,6 @@ export default function Project() {
 
   const items = ["All", "Basic", "Web App", "React", "MERN"];
 
-  const navigate = useNavigate();
   const handleProject = (elem) => {
     setActiveItem(elem);
   };
@@ -56,13 +55,23 @@ export default function Project() {
                       alt="ProjectImage"
                     />
                     <div className="displayProj">
-                      <a href={elem.siteurl} target="_blank">
+                      <a
+                        href={elem.siteurl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="projlink"
+                      >
                         <VisibilityIcon
                           style={{ fontSize: "40px" }}
                           className="eye"
                         />
                       </a>
-                      <a href={elem.giturl} target="_blank">
+                      <a
+                        href={elem.giturl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="projlink"
+                      >
                         <GitHubIcon
                           style={{ fontSize: "40px" }}
                           className="axy"
@@ -90,13 +99,23 @@ export default function Project() {
                   <div className="card-view">
                     <img src={elem.image} className="card-img" />
                     <div className="displayProj">
-                      <a href={elem.siteurl} target="_blank">
+                      <a
+                        href={elem.siteurl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="projlink"
+                      >
                         <VisibilityIcon
                           style={{ fontSize: "40px" }}
                           className="eye"
                         />
                       </a>
-                      <a href={elem.giturl} target="_blank">
+                      <a
+                        href={elem.giturl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="projlink"
+                      >
                         <GitHubIcon
                           style={{ fontSize: "40px" }}
                           className="axy"
