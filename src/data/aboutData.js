@@ -57,4 +57,5 @@ export const myHobbies = [
   },
 ];
 
-export default { myIntro, myHobbies, myRoles };
+const aboutData = { myIntro, myHobbies, myRoles };
+export default aboutData;

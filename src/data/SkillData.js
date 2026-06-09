@@ -113,4 +113,5 @@ export const mySkills = [
   },
 ];
 
-export default { mySkills, myExperience, myEducation };
+const skillData = { mySkills, myExperience, myEducation };
+export default skillData;

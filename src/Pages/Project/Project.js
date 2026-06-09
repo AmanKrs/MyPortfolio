@@ -43,8 +43,7 @@ export default function Project() {
       </nav>
       <section className="projectBody">
         {projectDetails.map((elem, key) => {
-          console.log(key);
-          if (elem.type == activeItem) {
+          if (elem.type === activeItem) {
             return (
               <>
                 <div className="card" key={key}>
@@ -92,12 +91,16 @@ export default function Project() {
                 </div>
               </>
             );
-          } else if (activeItem == "All") {
+          } else if (activeItem === "All") {
             return (
               <>
                 <div className="card" key={key}>
                   <div className="card-view">
-                    <img src={elem.image} className="card-img" />
+                    <img
+                      src={elem.image}
+                      className="card-img"
+                      alt={elem.title}
+                    />
                     <div className="displayProj">
                       <a
                         href={elem.siteurl}
